@@ -1,0 +1,18 @@
+CREATE DATABASE master
+  WITH OWNER = laughingman7743
+       ENCODING = 'UTF8'
+       LC_COLLATE = 'C'
+       LC_CTYPE = 'C'
+       TEMPLATE = template0
+       CONNECTION LIMIT = -1;
+
+CREATE DATABASE slave
+  WITH OWNER = laughingman7743
+       ENCODING = 'UTF8'
+       LC_COLLATE = 'C'
+       LC_CTYPE = 'C'
+       TEMPLATE = template0
+       CONNECTION LIMIT = -1;
+
+CREATE ROLE playapp LOGIN PASSWORD 'playapp'
+  NOSUPERUSER INHERIT NOCREATEDB NOCREATEROLE NOREPLICATION;
